@@ -16,7 +16,7 @@ public class TimeConverter {
             int sVal = scan.nextInt();
 
             System.out.println("Input: " + hVal + " hour, " + mVal + " minute, and " + sVal + " second");
-            System.out.println("Total seconds: " + hVal * 3600 + mVal * 60 + sVal);
+            System.out.println("Total seconds: " + (hVal*3600 + mVal* 60+ sVal));
 
             System.out.println("Calculation:");
             System.out.println(hVal + " hours x 3600 = " + hVal*3600 + " hours");

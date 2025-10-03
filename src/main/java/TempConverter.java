@@ -9,7 +9,7 @@ public class TempConverter {
             System.out.println("1. Convert Fahrenheit to Celsius");
             System.out.println("2. Convert Celsius to Fahrenheit");
             System.out.println("3. Exit");
-            System.out.print("Choose your option: ");
+            System.out.print("Please enter 1, 2, or 3: ");
             int userChoice = scan.nextInt();
 
             switch (userChoice) {
@@ -17,33 +17,26 @@ public class TempConverter {
                     System.out.print("Enter F value: ");
                     double fVal = scan.nextDouble();
 
-                    System.out.println("Fahrenheit Value: " + fVal);
-                    System.out.println("Celsius Value: " + (fVal - 32) * 5 / 9);
+                    System.out.println("Fahrenheit: " + fVal);
+                    System.out.println("Celsius: " + ((fVal - 32) * (5.0/9.0)));
                     break;
 
                 case 2:
                     System.out.print("Enter C value: ");
                     double cVal = scan.nextDouble();
 
-                    System.out.println("Celsius Value: " + cVal);
-                    System.out.println("Fahrenheit Value: " + cVal * 9 / 5 + 32);
+                    System.out.println("Celsius: " + cVal);
+                    System.out.println("Fahrenheit: " + ((cVal * (9.0/5.0)) + 32));
                     break;
 
                 case 3:
-                    System.out.println("Bye");
+                    System.out.println("Goodbye!");
                     isRunning = false;
                     break;
 
                 default:
-                    System.out.println("ERROR: INVALID OPTION");
+                    System.out.println("Invalid choice");
             }
         }
-
-        // Requirements:
-        // - Menu with options: 1. Convert Fahrenheit to Celsius, 2. Convert Celsius to Fahrenheit, 3. Exit
-        // - Loop until user chooses to exit
-        // - Use formulas: C = (F - 32) * 5/9 and F = C * 9/5 + 32
-        // - Display conversion results
-        // - Handle invalid menu choices
     }
 }
